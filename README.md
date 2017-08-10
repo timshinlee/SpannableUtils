@@ -3,18 +3,18 @@ a library encapuslating the usage of SpannableString in the form of builder patt
 ## import
 in the build gradle of the root project 
 ```
-	allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
+allprojects {
+	repositories {
+		...
+		maven { url 'https://jitpack.io' }
 	}
+}
 ```
 in the build gradle of the module
 ```
-	dependencies {
-	        compile 'com.github.timshinlee:SpannableUtils:1.0.0'
-	}
+dependencies {
+	compile 'com.github.timshinlee:SpannableUtils:1.0.0'
+}
 ```
 ## usage
 ```
