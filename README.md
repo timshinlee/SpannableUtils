@@ -1,7 +1,9 @@
 # SpannableUtils
-a library encapuslating the usage of SpannableString in the form of builder pattern.
+a library encapuslating the usage of SpannableString in the form of builder pattern.<br/>
+封装了SpannableString的API方便调用
 ## import
-in the build gradle of the root project 
+in the build gradle of the root project：<br/>
+根目录的build.gradle中添加：
 ```
 allprojects {
 	repositories {
@@ -10,7 +12,8 @@ allprojects {
 	}
 }
 ```
-in the build gradle of the module
+in the build gradle of the module：<br/>
+当前工程的build.gradle中添加：
 ```
 dependencies {
 	compile 'com.github.timshinlee:SpannableUtils:1.0.0'
@@ -18,6 +21,8 @@ dependencies {
 ```
 ## usage
 ```
+TextView text = (TextView)findViewById(R.id.text);
+
 SpannableString spannable = SpannableUtils.builder(source)
                     .setUrl(text, "http://www.baidu.com", 0, 3)
                     .setColor(Color.BLUE, "超链接")
@@ -47,6 +52,8 @@ SpannableString spannable = SpannableUtils.builder(source)
                     .setScaleX(1.5f, "水平拉伸")
                     .setQuote(Color.MAGENTA, "引用")
                     .build();
+		    
+text.setText(spannable);
 ```
 ## screen capture
 ![](https://github.com/timshinlee/SpannableUtils/blob/master/screenshots/screenshot1.png)
